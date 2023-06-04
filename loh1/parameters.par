@@ -1,0 +1,56 @@
+&Equations
+MaterialFileName = 'materials.yaml'
+/
+
+&IniCondition                        ! no initial condition
+/
+
+&Boundaries                          ! activate boundary conditions:
+BC_fs = 1                            ! Free surface
+BC_of = 1                            ! Absorbing boundaries
+/
+
+&SourceType
+Type = 42
+FileName = 'source.nrf'
+/
+
+&SpongeLayer
+/
+
+&MeshNml
+MeshFile = '/scratch/project/scenarious/lts-scaling/meshes/cuboid-type1.h5'
+meshgenerator = 'PUML'               ! Name of meshgenerator (format)
+/
+
+&Discretization
+Material = 1                         ! Material order
+CFL = 0.5                            ! CFL number (<=1.0)
+FixTimeStep = 5                      ! Manualy chosen minimum time
+ClusteredLTS =  2
+LtsWeightTypeId = 2
+/
+
+&Output
+OutputFile = 'output/cuboid'   
+iOutputMask = 1 1 1 1 1 1 1 1 1      ! Variables ouptut
+iOutputMaskMaterial = 1 1 1          ! Material output
+Format = 10                           ! Format (0=IDL, 1=TECPLOT, 2=IBM DX, 4=GiD))
+TimeInterval = 0.5                   ! Index of printed info at time
+printIntervalCriterion = 2           ! Criterion for index of printed info: 1=timesteps,2=time,3=timesteps+time
+!pickdt = 0.001                      ! Pickpoint Sampling
+pickdt = 0.000500285
+pickDtType = 1                       ! Pickpoint Type
+nRecordPoints = 0                   ! number of Record points which are read from file
+RFileName = 'recordPoints.dat'      ! Record Points in extra file
+/
+
+&AbortCriteria
+EndTime = 1.0
+/
+
+&Analysis
+/
+
+&Debugging
+/
