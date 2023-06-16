@@ -19,7 +19,7 @@ FileName = 'source.nrf'
 /
 
 &MeshNml
-MeshFile = '/scratch/project/scenarious/lts-scaling/meshes/cuboid-type1.h5'
+MeshFile = '../meshes/loh1.h5'
 meshgenerator = 'PUML'               ! Name of meshgenerator (format)
 /
 
