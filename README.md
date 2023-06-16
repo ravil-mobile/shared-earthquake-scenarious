@@ -12,7 +12,7 @@ loh1 - layer over halfspace with a single point source
 
 ## Git LFS
 
-'git-lfs' is required to download mesh files. Please follow [the instruction](http://arfc.github.io/manual/guides/git-lfs) - i.e., steps 1-3 - and install `git-lfs` addon. Note, the installation script accepts `PREFIX` env. variable, which you can use to install the addon to a specific directory. In this case, You will need to append your `PATH` env. variable with the location of git-lfs executable - i.e., the installation directory.
+`git-lfs` is required to download mesh files. Please follow [the instruction](http://arfc.github.io/manual/guides/git-lfs) - i.e., steps 1-3 - and install `git-lfs` addon. Note, the installation script accepts `PREFIX` env. variable, which you can use to install the addon to a specific directory. In this case, You will need to append your `PATH` env. variable with the location of git-lfs executable - i.e., the installation directory.
 
 Execute the following once you clone the repository to download meshes
 
